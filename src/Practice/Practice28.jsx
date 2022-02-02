@@ -1,21 +1,27 @@
-// import React from "react";
+import React from "react";
+// import Clock from "./Clock";
+//------------------------------functional based-----------------
 
-// //------------------------------functional based-----------------
-// // const PropsComponent=(props)=>{
-//  //   const [state,setState]=useState(0);
-// //     return(
-// //         <div>
-// //             <h1>Name is: {props.detail.name}</h1>
-// //             <h1>count: {state}</h1>
-// //             <h1>Age is: {props.detail.age}</h1>
-// //         </div>
-// //     )
-// // }
+const Clock=(props)=>{
+    return(
+        <div>
+            <h1>time is: {props.date.toLocaleTimeString()}</h1>
+        </div>
+    )
+}
+const PropsComponent=()=>{
+//    const [state,setState]=useState(0);
+    return(
+        <div>
+            <Clock date={new Date()}/>
+        </div>
+    )
+}
+setInterval(PropsComponent,1000);
+export default PropsComponent;
 
-// // export default PropsComponent;
 
-
-// ------------------------------class based-----------------------
+//------------------------------class based-----------------------
 // class PropsComponent extends React.Component{
 //     state={
 //         name:"Rahul"
